@@ -26,7 +26,7 @@ def favorite_dessert(users_dessert):
 
 @app.route('/madlibs/<adjective>/<noun>')
 def two_string(adjective, noun):
-    """Display a funny but work-appropriate story using adjective and noun"""
+    """Display a funny but work-appropriate story using adjective and noun."""
     story = f'Today, I tried to get some {adjective} work done from home, but my 3-year-old had other plans.\n'
     story += f'First, he turned my {noun} into a {adjective} fort and insisted I help guard it from imaginary {noun}.\n'
     story += f'Then, while I was on a video call, he brought me a {adjective} drawing of a {noun} and proudly declared it his “masterpiece.” \n'
@@ -34,6 +34,18 @@ def two_string(adjective, noun):
     story += f'and the giggles, we both managed to accomplish something: him—an {adjective} nap; me—a sense of {noun}.'
 
     return story
+
+@app.route('/multiply/<number1>/<number2>')
+def multiply(number1, number2):
+    """Display two numbers that are multiplied."""
+    if number1.isdigit() and number2.isdigit():
+        result = int(number1) * int(number2)
+        return f'{number1} times {number2} is {result}'
+    else:
+        return 'Invalid inputs. Please try again by entering 2 numbers!'
+
+
+
 
 
 
