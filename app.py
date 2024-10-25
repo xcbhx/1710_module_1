@@ -1,6 +1,9 @@
 # import flask library
 from flask import Flask
 
+# Import the random library
+import random
+
 # set up app variable, to start writing routes
 app = Flask(__name__)
 
@@ -54,10 +57,16 @@ def sayntimes(word, n):
         return 'Invalid input. Please try again by entering a word and a number!'
 
 
-
-
-
-
+@app.route('/dicegame')
+def dicegame():
+    """Display random number from 1 to 6 user rolls."""
+    roll = random.randint(1, 6)
+    if roll == 6:
+        return f'You rolled a {roll}. You won!'
+    else:
+        return f'You rolled a {roll}. You lost!'
+        
+            
 
 
 
