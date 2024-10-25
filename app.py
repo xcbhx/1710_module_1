@@ -24,8 +24,16 @@ def favorite_dessert(users_dessert):
     return f'How did you know I liked {users_dessert}?'
 
 
+@app.route('/madlibs/<adjective>/<noun>')
+def two_string(adjective, noun):
+    """Display a funny but work-appropriate story using adjective and noun"""
+    story = f'Today, I tried to get some {adjective} work done from home, but my 3-year-old had other plans.\n'
+    story += f'First, he turned my {noun} into a {adjective} fort and insisted I help guard it from imaginary {noun}.\n'
+    story += f'Then, while I was on a video call, he brought me a {adjective} drawing of a {noun} and proudly declared it his “masterpiece.” \n'
+    story += f'By noon, my laptop was covered in {adjective} stickers, and my to-do list had turned into a {noun}. But somehow, between the {noun} \n'
+    story += f'and the giggles, we both managed to accomplish something: him—an {adjective} nap; me—a sense of {noun}.'
 
-
+    return story
 
 
 
