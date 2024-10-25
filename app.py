@@ -18,7 +18,10 @@ def favorite_animal(users_animal):
     """Display a message to the user that changes based on their favorite animal."""
     return f'Wow, {users_animal} is my favorite animal, too!'
 
-
+@app.route('/dessert/<users_dessert>')
+def favorite_dessert(users_dessert):
+    """Display a messgae with the users favorite dessert"""
+    return f'How did you know I liked {users_dessert}?'
 
 
 
