@@ -44,6 +44,18 @@ def multiply(number1, number2):
     else:
         return 'Invalid inputs. Please try again by entering 2 numbers!'
 
+@app.route('/sayntimes/<word>/<n>')
+def sayntimes(word, n):
+    """Repeat the word a given number of times."""
+    if n.isdigit():
+        result = ' '.join([word] * int(n))
+        return result
+    else:
+        return 'Invalid input. Please try again by entering a word and a number!'
+
+
+
+
 
 
 
